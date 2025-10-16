@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #0055a5;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav {
+      background: #007bff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #0056b3;
+      border-radius: 5px;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 10px 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e9ecef;
+    }
+
+    #thankyou-section {
+      text-align: center;
+    }
+
+    #contact-section {
+      display: none;
+      text-align: center;
+    }
+
+    input, textarea {
+      width: 80%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #0055a5;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Resume Website</h1>
+  </header>
+
+  <nav>
+    <a href="#intro" onclick="showSection('intro')">Intro</a>
+    <a href="#objective" onclick="showSection('objective')">Objective</a>
+    <a href="#experience" onclick="showSection('experience')">Experience</a>
+    <a href="#skills" onclick="showSection('skills')">Skills</a>
+    <a href="#softskills" onclick="showSection('softskills')">Soft Skills</a>
+    <a href="#achievements" onclick="showSection('achievements')">Achievements</a>
+    <a href="#services" onclick="showSection('services')">My Services</a>
+  </nav>
+
+  <section id="intro" class="active">
+    <h2>Intro</h2>
+    <p><b>Full Name:</b> [Enter Full Name]</p>
+    <p><b>Phone:</b> [Enter Phone Number]</p>
+    <p><b>Email:</b> [Enter Email]</p>
+    <p><b>Persons with Disability:</b> Visually Impaired</p>
+    <button onclick="nextSection('objective')">Next</button>
+  </section>
+
+  <section id="objective">
+    <h2>Objective</h2>
+    <ul>
+      <li>Seeking a challenging position in a reputed organization to learn new skills, expand knowledge, and leverage my learnings.</li>
+      <li>Seeking a customer support role where I can communicate clearly, resolve queries efficiently, and ensure a positive customer experience.</li>
+    </ul>
+    <button onclick="nextSection('experience')">Next</button>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>Volunteered at the Blind People Association, Ahmedabad – 1 year 4 months</li>
+      <li>Volunteered at SLTC – 1 year</li>
+      <li>Computer Trainer at SLTC – 8 months</li>
+      <li>Content Writer – 5 months</li>
+      <li>Ad hoc Lecturer at VCT Mahila Arts & Commerce College – 3 months</li>
+      <li>English Trainer at Nanak Centre of Excellence for the Blind</li>
+    </ul>
+    <button onclick="nextSection('skills')">Next</button>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Proficient in computer and mobile operations using screen readers</li>
+      <li>Skilled in email writing and digital communication</li>
+      <li>Familiar with Braille in Gujarati, Hindi, and English</li>
+      <li>Experience with Braille refreshable displays (Orbit Writer/Reader)</li>
+    </ul>
+    <button onclick="nextSection('softskills')">Next</button>
+  </section>
+
+  <section id="softskills">
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Adaptability and openness to new challenges</li>
+      <li>Patience and active listening</li>
+      <li>Strong communication and organization</li>
+      <li>Effective time management</li>
+    </ul>
+    <button onclick="nextSection('achievements')">Next</button>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements & Education</h2>
+    <ul>
+      <li>Participated in school-level Braille competitions</li>
+      <li>Awarded for excellence in Braille literacy</li>
+    </ul>
+
+    <h3>Education</h3>
+    <table>
+      <tr><th>Course</th><th>Institution</th><th>Duration</th><th>Details</th></tr>
+      <tr><td>M.A. English</td><td>VNSGU</td><td>2021–2023</td><td>CGPA 6.43, typed using screen reader</td></tr>
+      <tr><td>B.A. English Honors</td><td>LD Arts College</td><td>2018–2021</td><td>Electives: Psychology, Computer</td></tr>
+    </table>
+
+    <h3>Certifications</h3>
+    <table>
+      <tr><th>Program</th><th>Organization</th><th>Duration</th><th>Focus</th></tr>
+      <tr><td>PARIVARTAN Workshop</td><td>Manobal, Pune</td><td>Jan–Aug 2022</td><td>Personal development</td></tr>
+      <tr><td>Career Awareness Workshop</td><td>Enable India</td><td>Apr 2024 & May 2023</td><td>Career planning</td></tr>
+      <tr><td>GSET (English)</td><td>Govt. of Gujarat</td><td>Jan 2024</td><td>Qualified for Lectureship</td></tr>
+    </table>
+
+    <button onclick="nextSection('services')">Next</button>
+  </section>
+
+  <section id="services">
+    <h2>My Services</h2>
+    <p>Providing accessibility testing, translation (English ↔ Hindi), and freelance English teaching.</p>
+    <p>Over 2 years of experience improving students’ English and promoting accessibility awareness.</p>
+    <button onclick="completeResume()">Complete Resume</button>
+  </section>
+
+  <section id="thankyou-section">
+    <h2>🎉 Thank You!</h2>
+    <p>Thank you for viewing my resume.</p>
+    <p>Would you like to visit the first page or contact us?</p>
+    <button onclick="goToFirstPage()">Go to First Page</button>
+    <button onclick="showContact()">Contact Us</button>
+  </section>
+
+  <section id="contact-section">
+    <h2>Contact Me</h2>
+    <p>You can reach out using the form below:</p>
+    <form onsubmit="alert('Message Sent Successfully!'); return false;">
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="4" placeholder="Your Message"></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Resume Website | Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function nextSection(nextId) {
+      showSection(nextId);
+    }
+
+    function completeResume() {
+      showSection('thankyou-section');
+    }
+
+    function goToFirstPage() {
+      showSection('intro');
+    }
+
+    function showContact() {
+      showSection('contact-section');
+    }
+  </script>
+</body>
+</html>
